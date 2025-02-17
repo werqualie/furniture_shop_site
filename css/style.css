@@ -11,34 +11,72 @@
     transition: 0.2s linear;
   }
 
-  .search-container {
-    display: flex;
-    margin-bottom: 20px;
-  }
-  
-  #search-input {
-    padding: 10px;
-    width: 300px;
-  }
-  
-  #search-button {
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .results-container {
-    margin-top: 20px;
-  }
-  
-  .result-item {
-    border: 1px solid #ccc;
-    padding: 15px;
-    margin-bottom: 10px;
-    background-color: #f9f9f9;
-  }
+/* Стиль для контейнера поиска */
+.search-container {
+  display: flex;
+  align-items: center; /* Центрирование элементов внутри контейнера */
+  margin-bottom: 20px;
+}
+
+/* Стиль для поля ввода */
+#search-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 4px 0 0 4px; /* Закругленные углы слева */
+  width: 300px;
+  transition: border-color 0.3s ease; /* Плавный переход цвета границы */
+}
+
+#search-input:focus {
+  border-color: #007BFF; /* Изменение цвета границы при фокусировке */
+  outline: none; /* Убираем стандартную обводку при фокусировке */
+}
+
+/* Стиль для кнопки поиска */
+#search-button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0; /* Закругленные углы справа */
+  transition: background-color 0.3s ease; /* Плавный переход цвета фона */
+}
+
+#search-button:hover {
+  background-color: #0056b3; /* Изменение цвета фона при наведении */
+}
+/* Стиль для контейнера результатов поиска */
+.results-container {
+  margin-top: 20px;
+}
+
+/* Стиль для каждого элемента результата */
+.result-item {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Добавление тени для лучшего визуального эффекта */
+}
+
+.result-item h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.result-item p {
+  color: #666;
+  font-size: 14px;
+}
+
+.result-item img {
+  max-width: 100px;
+  float: left;
+  margin-right: 15px;
+}
 
   html {
     font-size: 61.5%;
