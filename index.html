@@ -24,10 +24,11 @@
     https://werqualie.github.io/furniture_shop_site/" class="logo"> <i class="fas fa-chair"></i> УютМебель </a>
 
     <div class="search-container">
-      <input type="text" id="search-input" placeholder="Поиск товаров...">
-      <button id="search-button">Найти</button>
+      <form action="search-results.html" method="GET">
+        <input type="text" id="search-input" name="query" placeholder="Поиск товаров...">
+        <button type="submit" id="search-button">Найти</button>
+      </form>
     </div>
-    
     <div id="search-results" class="results-container"></div>
 
     <nav class="nav-menu">
