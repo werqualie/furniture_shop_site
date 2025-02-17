@@ -5,7 +5,7 @@
       "category": "sofas",
       "price": 25000,
       "description": "Комфортный диван для гостиной.",
-      "image": "product-1.jpg"
+      "image": "image/product-1.jpg"
     },
     {
       "id": 2,
@@ -13,7 +13,7 @@
       "category": "chairs",
       "price": 3500,
       "description": "Прочный стул из натурального дерева.",
-      "image": "product-2.jpg"
+      "image": "image/product-2.jpg"
     },
     {
       "id": 3,
@@ -21,7 +21,7 @@
       "category": "tables",
       "price": 8000,
       "description": "Функциональный стол для работы.",
-      "image": "product-3.jpg"
+      "image": "image/product-3.jpg"
     },
     {
       "id": 4,
@@ -29,6 +29,6 @@
       "category": "sofas",
       "price": 5000,
       "description": "Уютное кресло для отдыха.",
-      "image": "product-4.jpg"
+      "image": "image/product-4.jpg"
     }
   ]
