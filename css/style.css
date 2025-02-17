@@ -74,8 +74,8 @@
 
 .result-item img {
   max-width: 100px;
-  float: left;
-  margin-right: 15px;
+  height: auto;
+  display: block
 }
 
   html {
