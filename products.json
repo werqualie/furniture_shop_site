@@ -1,0 +1,34 @@
+[
+    {
+      "id": 1,
+      "name": "Диван классический",
+      "category": "sofas",
+      "price": 25000,
+      "description": "Комфортный диван для гостиной.",
+      "image": "product-1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Стул деревянный",
+      "category": "chairs",
+      "price": 3500,
+      "description": "Прочный стул из натурального дерева.",
+      "image": "product-2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Стол компьютерный",
+      "category": "tables",
+      "price": 8000,
+      "description": "Функциональный стол для работы.",
+      "image": "product-3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Кресло-мешок",
+      "category": "sofas",
+      "price": 5000,
+      "description": "Уютное кресло для отдыха.",
+      "image": "product-4.jpg"
+    }
+  ]

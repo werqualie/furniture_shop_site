@@ -22,11 +22,12 @@
   <header class="header">
     <a href="https://werqualie.github.io/furniture_shop_site/" class="logo"> <i class="fas fa-chair"></i> УютМебель </a>
 
-    <form action="" class="search-form">
-      <input type="search" placeholder="поиск..." id="search-box">
-      <label for="search-box" class="fas fa-search"></label>
-    </form>
-
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Поиск товаров...">
+      <button id="search-button">Найти</button>
+    </div>
+    
+    <div id="search-results" class="results-container"></div>
 
 
     <nav class="nav-menu">
@@ -121,5 +122,6 @@
   </section>
 
   <script src="https://kit.fontawesome.com/342a6e6322.js" crossorigin="anonymous"></script>
-
+  <script src="search.js"></script>
+</body>
 </html>

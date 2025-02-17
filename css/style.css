@@ -11,6 +11,35 @@
     transition: 0.2s linear;
   }
 
+  .search-container {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  #search-input {
+    padding: 10px;
+    width: 300px;
+  }
+  
+  #search-button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .results-container {
+    margin-top: 20px;
+  }
+  
+  .result-item {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+  }
+
   html {
     font-size: 61.5%;
     overflow-x: hidden;
