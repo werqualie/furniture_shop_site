@@ -1,8 +1,16 @@
 // Функция для загрузки данных из JSON
 async function loadProducts() {
-    const response = await fetch('js/products.json');
-    const products = await response.json();
-    return products;
+    try {
+      const response = await fetch('products.json');
+      if (!response.ok) {
+        throw new Error('Не удалось загрузить товары');
+      }
+      const products = await response.json();
+      return products;
+    } catch (error) {
+      console.error(error);
+      alert('Ошибка загрузки товаров');
+    }
   }
   
   // Функция для отображения товаров
@@ -37,6 +45,35 @@ async function loadProducts() {
     });
   }
   
+  // Функция для отображения результатов поиска
+  function displaySearchResults(results) {
+    const resultsContainer = document.getElementById('search-results');
+    resultsContainer.innerHTML = ''; // Очищаем контейнер перед добавлением новых результатов
+  
+    if (results.length === 0) {
+      const noResultsItem = document.createElement('div');
+      noResultsItem.classList.add('result-item');
+      noResultsItem.textContent = 'Товары не найдены';
+      resultsContainer.appendChild(noResultsItem);
+    } else {
+      results.forEach(product => {
+        const resultItem = document.createElement('div');
+        resultItem.classList.add('result-item');
+        resultItem.innerHTML = `
+          <img src="${product.image}" alt="${product.name}">
+          <h3>${product.name}</h3>
+          <p>${product.price.toLocaleString()} ₽</p>
+        `;
+        resultItem.addEventListener('click', () => {
+          window.location.href = `product.html?id=${product.id}`;
+        });
+        resultsContainer.appendChild(resultItem);
+      });
+    }
+  
+    resultsContainer.style.display = 'block';
+  }
+  
   // Функция для поиска товаров
   function searchProducts(query, products) {
     return products.filter(product => product.name.toLowerCase().includes(query.toLowerCase()));
@@ -46,9 +83,10 @@ async function loadProducts() {
   document.getElementById('search-button').addEventListener('click', async () => {
     const query = document.getElementById('search-input').value;
     const products = await loadProducts();
-    const filteredProducts = searchProducts(query, products);
-    displayProducts(filteredProducts, 'search-results');
-    document.getElementById('search-results').style.display = 'block';
+    if (products) {
+      const filteredProducts = searchProducts(query, products);
+      displaySearchResults(filteredProducts);
+    }
   });
   
   // Обработчик нажатия клавиши Enter в поле поиска
@@ -56,16 +94,34 @@ async function loadProducts() {
     if (event.key === 'Enter') {
       const query = document.getElementById('search-input').value;
       const products = await loadProducts();
-      const filteredProducts = searchProducts(query, products);
-      displayProducts(filteredProducts, 'search-results');
-      document.getElementById('search-results').style.display = 'block';
+      if (products) {
+        const filteredProducts = searchProducts(query, products);
+        displaySearchResults(filteredProducts);
+      }
+    }
+  });
+  
+  // Обработчик потери фокуса поля поиска для скрытия результатов
+  document.getElementById('search-input').addEventListener('blur', () => {
+    setTimeout(() => {
+      document.getElementById('search-results').style.display = 'none';
+    }, 200);
+  });
+  
+  // Обработчик клика по документу для скрытия результатов поиска
+  document.addEventListener('click', (event) => {
+    const searchContainer = document.querySelector('.search-container');
+    if (!searchContainer.contains(event.target)) {
+      document.getElementById('search-results').style.display = 'none';
     }
   });
   
   // Основная функция для выполнения
   async function main() {
     const products = await loadProducts();
-    displayProducts(products);
+    if (products) {
+      displayProducts(products);
+    }
   }
   
   main();

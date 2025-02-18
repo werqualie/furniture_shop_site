@@ -78,6 +78,53 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Добавление тени для лучшего визуального эффекта */
 }
 
+/* Стиль для контейнера результатов поиска */
+.results-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-top: none;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  display: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Стиль для каждого элемента результата */
+.result-item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.result-item:hover {
+  background-color: #f0f0f0;
+}
+
+.result-item img {
+  max-width: 50px;
+  height: auto;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.result-item h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.result-item p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #666;
+}
+
 .result-item h3 {
   margin-top: 0;
   color: #333;
