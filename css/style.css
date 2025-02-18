@@ -10,8 +10,8 @@
   outline: none;
   border: none;
   text-decoration: none;
-  text-transform: capitalize;
   transition: 0.2s linear;
+  
 }
 
 /* Глобальные стили */
@@ -55,7 +55,6 @@ section {
 
 .heading h3 {
   font-size: 2.5rem;
-  text-transform: uppercase;
   color: #fff;
 }
 
@@ -158,23 +157,24 @@ section {
 }
 
 #search-input:focus {
-  border-color: #007bff;
+  border-color: #07a1a1;
   outline: none;
 }
 
 /* Стиль для кнопки поиска */
 #search-button {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #07a1a1;
   color: white;
   border: none;
   cursor: pointer;
   border-radius: 0 4px 4px 0;
   transition: background-color 0.3s ease;
+  margin-left: 10px;
 }
 
 #search-button:hover {
-  background-color: #0056b3;
+  background-color: #07a1a1;
 }
 
 /* Стиль для контейнера результатов поиска */
@@ -556,7 +556,6 @@ section {
   border-bottom: 0.1rem solid #07a1a1;
   font-size: 1.6rem;
   color: #07a1a1;
-  text-transform: none;
   padding-top: 2rem;
   height: 30%;
   padding-bottom: 0.4em;
@@ -618,7 +617,6 @@ section {
   padding: 1rem 1.2rem;
   font-size: 1.6rem;
   color: #07a1a1;
-  text-transform: none;
   margin: 0.7rem 0;
   border: 0.1rem solid #07a1a1;
   border-radius: 10px;
@@ -835,7 +833,6 @@ section {
 
 .login-form form .box {
   width: 100%;
-  text-transform: none;
   font-size: 1.5rem;
   color: #07a1a1;
   padding: 1rem 1.2rem;
@@ -902,6 +899,8 @@ section {
   gap: 1.5rem;
   display: none;
 }
+
+
 
 .home .slides-container .slide.active {
   display: flex;
