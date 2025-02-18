@@ -4,7 +4,7 @@ const productId = parseInt(urlParams.get('id'), 10);
 
 // Функция для загрузки данных из JSON
 async function loadProducts() {
-  const response = await fetch('products.json');
+  const response = await fetch('js/products.json');
   const products = await response.json();
   return products;
 }
@@ -13,7 +13,7 @@ async function loadProducts() {
 function displayProduct(product) {
   document.getElementById('product-image').src = product.image;
   document.getElementById('product-name').textContent = product.name;
-  document.getElementById('product-price').textContent = `Цена: ${product.price} руб.`;
+  document.getElementById('product-price').textContent = `Цена: ${product.price.toLocaleString()} ₽`;
   document.getElementById('product-description').textContent = product.description;
 }
 

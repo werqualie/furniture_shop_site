@@ -60,6 +60,51 @@
   margin-top: 20px;
 }
 
+/* Стиль для контейнера результатов поиска */
+.results-container {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Стиль для каждого элемента результата */
+.result-item {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Добавление тени для лучшего визуального эффекта */
+}
+
+.result-item h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.result-item p {
+  color: #666;
+  font-size: 14px;
+}
+
+.result-item img {
+  max-width: 100px;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Скрытие результатов поиска по умолчанию */
+.results-container {
+  display: none;
+}
+
+/* Отображение результатов поиска */
+.results-container.show {
+  display: grid;
+}
+
 /* Стиль для карточки товара */
 .product-card {
   border: 1px solid #ddd;
