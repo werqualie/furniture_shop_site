@@ -4,7 +4,7 @@ const productId = parseInt(urlParams.get('id'), 10);
 
 // Функция для загрузки данных из JSON
 async function loadProducts() {
-  const response = await fetch('js/products.json');
+  const response = await fetch('products.json');
   const products = await response.json();
   return products;
 }
