@@ -1,34 +1,66 @@
 [
-    {
-      "id": 1,
-      "name": "Диван классический",
-      "category": "sofas",
-      "price": 25000,
-      "description": "Комфортный диван для гостиной.",
-      "image": "image/product-1.jpg"
-    },
-    {
-      "id": 2,
-      "name": "Стул деревянный",
-      "category": "chairs",
-      "price": 3500,
-      "description": "Прочный стул из натурального дерева.",
-      "image": "image/product-2.jpg"
-    },
-    {
-      "id": 3,
-      "name": "Стол компьютерный",
-      "category": "tables",
-      "price": 8000,
-      "description": "Функциональный стол для работы.",
-      "image": "image/product-3.jpg"
-    },
-    {
-      "id": 4,
-      "name": "Кресло-мешок",
-      "category": "sofas",
-      "price": 5000,
-      "description": "Уютное кресло для отдыха.",
-      "image": "image/product-4.jpg"
-    }
-  ]
+  {
+    "id": 1,
+    "name": "Диван классический",
+    "category": "sofas",
+    "price": 25000,
+    "description": "Комфортный диван для гостиной.",
+    "image": "image/product-1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Стул деревянный",
+    "category": "chairs",
+    "price": 3500,
+    "description": "Прочный стул из натурального дерева.",
+    "image": "image/product-2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Стол компьютерный",
+    "category": "tables",
+    "price": 8000,
+    "description": "Функциональный стол для работы.",
+    "image": "image/product-3.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Кресло-мешок",
+    "category": "sofas",
+    "price": 5000,
+    "description": "Уютное кресло для отдыха.",
+    "image": "image/product-4.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Кровать двухместная",
+    "category": "beds",
+    "price": 30000,
+    "description": "Комфортная кровать для двоих.",
+    "image": "image/product-5.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Шкаф купе",
+    "category": "cupboards",
+    "price": 15000,
+    "description": "Модный шкаф для одежды.",
+    "image": "image/product-6.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Тумба под телевизор",
+    "category": "accessories",
+    "price": 7000,
+    "description": "Практичная тумба для организации пространства.",
+    "image": "image/product-7.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Комод",
+    "category": "cupboards",
+    "price": 10000,
+    "description": "Комод для хранения вещей.",
+    "image": "image/product-8.jpg"
+  }
+]

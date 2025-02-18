@@ -4,28 +4,23 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>УютМебель</title>
+  <title>Товар</title>
   <link rel="icon" type="image/x-icon" href="/image/favicon.ico">
-
   <!-- font awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
   <!-- css link -->
   <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-
   <!-- header  -->
-  
   <header class="header">
     <a href="https://werqualie.github.io/furniture_shop_site/" class="logo"> <i class="fas fa-chair"></i> УютМебель </a>
     <div class="search-container">
-      <input type="text" id="search-input" placeholder="Поиск товаров...">
-      <button id="search-button">Найти</button>
+      <form action="search-results.html" method="GET">
+        <input type="text" id="search-input" name="query" placeholder="Поиск товаров...">
+        <button type="submit" id="search-button">Найти</button>
+      </form>
     </div>
-
-    <div id="search-results" class="results-container"></div>
     <nav class="nav-menu">
       <ul class="nav-menu-list">
         <li class="menu-list-item">
@@ -45,43 +40,23 @@
         </li>
       </ul>
     </nav>
-
   </header>
 
-  <!-- shop -->
+  <!-- product details -->
+  <section class="product-details">
+    <div class="product-container">
+      <div class="product-image">
+        <img id="product-image" src="" alt="Товар">
+      </div>
+      <div class="product-info">
+        <h2 id="product-name"></h2>
+        <p class="price" id="product-price"></p>
+        <p class="description" id="product-description"></p>
+        <button class="btn">Добавить в корзину</button>
+      </div>
+    </div>
+  </section>
 
-  <section class="category">
-    
-    <h1 class="title"> <span>Категории</span> <a href="#"> больше товаров >></a> </h1>
-    <div class="box-container">
-      <a href="#" class="box">
-        <img src="image/icon-1.png" alt="">
-        <h3>Диваны</h3>
-      </a>
-      <a href="#" class="box">
-        <img src="image/icon-2.png" alt="">
-        <h3>Столы</h3>
-      </a>
-      <a href="#" class="box">
-        <img src="image/icon-3.png" alt="">
-        <h3>Тумбочки</h3>
-      </a>
-      <a href="#" class="box">
-        <img src="image/icon-4.png" alt="">
-        <h3>Кресла</h3>
-      </a>
-      <a href="#" class="box">
-        <img src="image/icon-5.png" alt="">
-        <h3>Шкафы</h3>
-      </a>
-    </div>
-  </section>
-  <section class="products">
-    <h1 class="title"> <span>Товары</span> <a href="#"> больше товаров >></a> </h1>
-    <div class="box-container" id="products-container">
-      <!-- Товары будут добавляться сюда динамически -->
-    </div>
-  </section>
   <!-- footer -->
   <section class="footer">
     <div class="box-container">
@@ -103,9 +78,9 @@
       </div>
       <div class="box">
         <h3>Социальные сети</h3>
-        <a href="https://vk.com/" class="links"> <i class="fab fa-vk"></i> Вконтакте</a>
-        <a href="https://web.telegram.org/" class="links"> <i class="fab fa-telegram-plane"></i> Телеграмм</a>
-        <a href="https://mail.ru/" class="links"> <i class="fas fa-envelope"></i> Электронная почта</a>
+        <a href="https://vk.com/" class="links"> <i class="fa-brands fa-vk"></i> Вконтакте</a>
+        <a href="https://web.telegram.org/" class="links"> <i class="fa-regular fa-paper-plane"></i> Телеграмм</a>
+        <a href="https://mail.ru/" class="links"> <i class="fa-regular fa-envelope"></i> Электронная почта</a>
       </div>
       <div class="box">
         <h3>Новости</h3>
@@ -117,12 +92,11 @@
       </div>
     </div>
   </section>
-
   <section class="credit">
     Все права защищены! Автор Yuri Zhigzhitov
   </section>
   <script src="https://kit.fontawesome.com/342a6e6322.js" crossorigin="anonymous"></script>
   <script src="products.json"></script>
-  <script src="shop.js"></script>
+  <script src="product.js"></script>
 </body>
 </html>
