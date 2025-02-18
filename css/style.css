@@ -632,6 +632,32 @@ section {
   background: #07a1a1;
 }
 
+/* Стиль для меню навигации */
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu-list {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.nav-menu-list .menu-list-item {
+  display: inline-block;
+}
+
+.nav-menu-list .menu-list-link {
+  color: #07a1a1;
+}
+
+.nav-menu-list .menu-list-link:hover {
+  color: #96a4a5;
+}
+
 /* Анимации */
 @keyframes rotate {
   0% {
@@ -1033,6 +1059,25 @@ section {
 
   .header .search-form.active {
     top: 99%;
+  }
+
+  .nav-menu-list {
+    display: none;
+  }
+
+  .navbar {
+    display: flex;
+  }
+
+  .header .burger-menu {
+    display: block;
+    cursor: pointer;
+    font-size: 2.5rem;
+    color: #07a1a1;
+  }
+
+  .header .burger-menu:hover {
+    color: #96a4a5;
   }
 }
 

@@ -20,7 +20,10 @@
       <button id="search-button">Найти</button>
       <div id="search-results" class="results-container"></div>
     </div>
-    <nav class="nav-menu">
+    <div class="burger-menu" id="burger-menu">
+      <i class="fas fa-bars"></i>
+    </div>
+    <nav class="nav-menu" id="nav-menu">
       <ul class="nav-menu-list">
         <li class="menu-list-item">
           <a href="https://werqualie.github.io/furniture_shop_site/" class="menu-list-link">Главная</a>
@@ -113,6 +116,22 @@
     Все права защищены! Автор Yuri Zhigzhitov
   </section>
   <script src="https://kit.fontawesome.com/342a6e6322.js" crossorigin="anonymous"></script>
-  <script src="shop.js"></script>
+  <script src="js/shop.js"></script>
+  <script>
+    // Обработчик для мобильного меню
+    const burgerMenu = document.getElementById('burger-menu');
+    const navMenu = document.getElementById('nav-menu');
+
+    burgerMenu.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+
+    // Закрытие меню при клике вне него
+    document.addEventListener('click', (event) => {
+      if (!navMenu.contains(event.target) && !burgerMenu.contains(event.target)) {
+        navMenu.classList.remove('active');
+      }
+    });
+  </script>
 </body>
 </html>
