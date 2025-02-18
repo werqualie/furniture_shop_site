@@ -1,13 +1,21 @@
 // Функция для загрузки данных из JSON
 async function loadProducts() {
-    const response = await fetch('products.json');
-    const products = await response.json();
-    return products;
+    try {
+      const response = await fetch('products.json');
+      if (!response.ok) {
+        throw new Error('Не удалось загрузить товары');
+      }
+      const products = await response.json();
+      return products;
+    } catch (error) {
+      console.error(error);
+      alert('Ошибка загрузки товаров');
+    }
   }
   
   // Функция для отображения товаров
-  function displayProducts(products) {
-    const container = document.getElementById('products-container');
+  function displayProducts(products, containerId = 'products-container') {
+    const container = document.getElementById(containerId);
     container.innerHTML = ''; // Очищаем контейнер перед добавлением новых товаров
   
     products.forEach(product => {
@@ -46,14 +54,32 @@ async function loadProducts() {
   document.getElementById('search-button').addEventListener('click', async () => {
     const query = document.getElementById('search-input').value;
     const products = await loadProducts();
-    const filteredProducts = searchProducts(query, products);
-    displayProducts(filteredProducts);
+    if (products) {
+      const filteredProducts = searchProducts(query, products);
+      displayProducts(filteredProducts, 'search-results');
+      document.getElementById('search-results').style.display = 'block';
+    }
+  });
+  
+  // Обработчик нажатия клавиши Enter в поле поиска
+  document.getElementById('search-input').addEventListener('keypress', async (event) => {
+    if (event.key === 'Enter') {
+      const query = document.getElementById('search-input').value;
+      const products = await loadProducts();
+      if (products) {
+        const filteredProducts = searchProducts(query, products);
+        displayProducts(filteredProducts, 'search-results');
+        document.getElementById('search-results').style.display = 'block';
+      }
+    }
   });
   
   // Основная функция для выполнения
   async function main() {
     const products = await loadProducts();
-    displayProducts(products);
+    if (products) {
+      displayProducts(products);
+    }
   }
   
   main();
