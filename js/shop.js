@@ -1,7 +1,7 @@
 // Функция для загрузки данных из JSON
 async function loadProducts() {
     try {
-      const response = await fetch('products.json');
+      const response = await fetch('json/products.json');
       if (!response.ok) {
         throw new Error('Не удалось загрузить товары');
       }
