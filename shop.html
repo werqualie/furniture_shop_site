@@ -24,6 +24,26 @@
       <button id="login-btn" class="btn">Вход</button>
       <button id="register-btn" class="btn">Регистрация</button>
     </div>
+
+    <nav class="nav-menu" id="nav-menu">
+      <ul class="nav-menu-list">
+        <li class="menu-list-item">
+          <a href="https://werqualie.github.io/furniture_shop_site/" class="menu-list-link">Главная</a>
+        </li>
+        <li class="menu-list-item">
+          <a href="/furniture_shop_site/shop.html" class="menu-list-link">Каталог</a>
+        </li>
+        <li class="menu-list-item">
+          <a href="/furniture_shop_site/about.html" class="menu-list-link">О нас</a>
+        </li>
+        <li class="menu-list-item">
+          <a href="/furniture_shop_site/blog.html" class="menu-list-link">Блог</a>
+        </li>
+        <li class="menu-list-item">
+          <a href="/furniture_shop_site/contact.html" class="menu-list-link">Контакты</a>
+        </li>
+      </ul>
+    </nav>
     <!-- Модальное окно входа -->
 <div class="login-form" id="login-form">
   <div class="form-content">
@@ -62,25 +82,6 @@
     </form>
   </div>
 </div>
-    <nav class="nav-menu" id="nav-menu">
-      <ul class="nav-menu-list">
-        <li class="menu-list-item">
-          <a href="https://werqualie.github.io/furniture_shop_site/" class="menu-list-link">Главная</a>
-        </li>
-        <li class="menu-list-item">
-          <a href="/furniture_shop_site/shop.html" class="menu-list-link">Каталог</a>
-        </li>
-        <li class="menu-list-item">
-          <a href="/furniture_shop_site/about.html" class="menu-list-link">О нас</a>
-        </li>
-        <li class="menu-list-item">
-          <a href="/furniture_shop_site/blog.html" class="menu-list-link">Блог</a>
-        </li>
-        <li class="menu-list-item">
-          <a href="/furniture_shop_site/contact.html" class="menu-list-link">Контакты</a>
-        </li>
-      </ul>
-    </nav>
   </header>
 
   <!-- shop -->
@@ -155,55 +156,7 @@
     Все права защищены! Автор Yuri Zhigzhitov
   </section>
   <script src="https://kit.fontawesome.com/342a6e6322.js" crossorigin="anonymous"></script>
-  <script src="shop.js"></script>
-  <script>
-    // Обработчики для модальных окон
-    const loginBtn = document.getElementById('login-btn');
-    const registerBtn = document.getElementById('register-btn');
-    const loginForm = document.getElementById('login-form');
-    const registerForm = document.getElementById('register-form');
-    const closerLogin = document.getElementById('closer-login');
-    const closerRegister = document.getElementById('closer-register');
-    const switchToRegister = document.getElementById('switch-to-register');
-    const switchToLogin = document.getElementById('switch-to-login');
-  
-    loginBtn.addEventListener('click', () => {
-      loginForm.classList.add('active');
-    });
-  
-    registerBtn.addEventListener('click', () => {
-      registerForm.classList.add('active');
-    });
-  
-    closerLogin.addEventListener('click', () => {
-      loginForm.classList.remove('active');
-    });
-  
-    closerRegister.addEventListener('click', () => {
-      registerForm.classList.remove('active');
-    });
-  
-    switchToRegister.addEventListener('click', (event) => {
-      event.preventDefault();
-      loginForm.classList.remove('active');
-      registerForm.classList.add('active');
-    });
-  
-    switchToLogin.addEventListener('click', (event) => {
-      event.preventDefault();
-      registerForm.classList.remove('active');
-      loginForm.classList.add('active');
-    });
-  
-    // Закрытие модальных окон при клике вне них
-    document.addEventListener('click', (event) => {
-      if (!loginForm.contains(event.target) && event.target !== loginBtn) {
-        loginForm.classList.remove('active');
-      }
-      if (!registerForm.contains(event.target) && event.target !== registerBtn) {
-        registerForm.classList.remove('active');
-      }
-    });
-  </script>
+  <script src="js/shop.js"></script>
+  <script src="js/auth.js"></script>
 </body>
 </html>
