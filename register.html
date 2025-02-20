@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Регистрация - УютМебель</title>
+  <link rel="icon" type="image/x-icon" href="/image/favicon.ico">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- css link -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- header  -->
+  <header class="header">
+    <a href="https://werqualie.github.io/furniture_shop_site/" class="logo"> <i class="fas fa-chair"></i> УютМебель </a>
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Поиск товаров...">
+      <button id="search-button">Найти</button>
+      <div id="search-results" class="results-container"></div>
+    </div>
+    <div class="burger-menu" id="burger-menu">
+      <i class="fas fa-bars"></i>
+    </div>
+    <nav class="nav-menu" id="nav-menu">
+      <ul class="nav-menu-list">
+        <li class="menu-list-item">
+          <a href="https://werqualie.github.io/furniture_shop_site/" class="menu-list-link">Главная</a>
+        </li>
+        <li class="menu-list-item">
+          <a href="/furniture_shop_site/shop.html" class="menu-list-link">Каталог</a>
+        </li>
+        <li class="menu-list-item">
+          <a href="/furniture_shop_site/about.html" class="menu-list-link">О нас</a>
+        </li>
+        <li class="menu-list-item">
+          <a href="/furniture_shop_site/blog.html" class="menu-list-link">Блог</a>
+        </li>
+        <li class="menu-list-item">
+          <a href="/furniture_shop_site/contact.html" class="menu-list-link">Контакты</a>
+        </li>
+        <li class="menu-list-item">
+          <a href="/furniture_shop_site/login.html" class="menu-list-link">Вход</a>
+        </li>
+        <li class="menu-list-item">
+          <a href="/furniture_shop_site/register.html" class="menu-list-link">Регистрация</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- registration form -->
+  <section class="login-form">
+    <form id="registration-form">
+      <h3>Регистрация</h3>
+      <div class="box">
+        <input type="text" name="username" required placeholder="Имя пользователя">
+      </div>
+      <div class="box">
+        <input type="email" name="email" required placeholder="Email">
+      </div>
+      <div class="box">
+        <input type="password" name="password" required placeholder="Пароль">
+      </div>
+      <div class="box">
+        <input type="password" name="confirm-password" required placeholder="Повторите пароль">
+      </div>
+      <button type="submit" class="btn">Зарегистрироваться</button>
+      <p>Уже зарегистрированы? <a href="login.html">Войти</a></p>
+    </form>
+  </section>
+
+  <!-- footer -->
+  <section class="footer">
+    <div class="box-container">
+      <div class="box">
+        <h3>Навигация</h3>
+        <a href="https://werqualie.github.io/furniture_shop_site/"> <i class="fas fa-home"></i> Главная</a>
+        <a href="https://werqualie.github.io/furniture_shop_site/shop.html"> <i class="fas fa-shopping-cart"></i> Каталог</a>
+        <a href="https://werqualie.github.io/furniture_shop_site/about.html"> <i class="fas fa-user-alt"></i> О нас</a>
+        <a href="https://werqualie.github.io/furniture_shop_site/blog.html"> <i class="fas fa-blog"></i> Блог</a>
+        <a href="https://werqualie.github.io/furniture_shop_site/contact.html"> <i class="fas fa-mail-bulk"></i> Контакты</a>
+      </div>
+      <div class="box">
+        <h3>дополнительные ссылки</h3>
+        <a href="#"> <i class="fas fa-shopping-bag"></i> Мой заказ</a>
+        <a href="#"> <i class="fas fa-heart"></i> Моя карзина</a>
+        <a href="#"> <i class="fas fa-id-card"></i> Мой аккаунт</a>
+        <a href="#"> <i class="fas fa-file-contract"></i> Политика возврата</a>
+        <a href="#"> <i class="fas fa-book"></i> Условия использования</a>
+      </div>
+      <div class="box">
+        <h3>Социальные сети</h3>
+        <a href="https://vk.com/" class="links"> <i class="fab fa-vk"></i> Вконтакте</a>
+        <a href="https://web.telegram.org/" class="links"> <i class="fab fa-telegram-plane"></i> Телеграмм</a>
+        <a href="https://mail.ru/" class="links"> <i class="fas fa-envelope"></i> Электронная почта</a>
+      </div>
+      <div class="box">
+        <h3>Новости</h3>
+        <p>Следите за новыми поступлениями</p>
+        <form action="">
+          <input type="email" name="" placeholder="Введи свою почту" id="">
+          <input type="submit" value="Подпишись" class="btn">
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="credit">
+    Все права защищены! Автор Yuri Zhigzhitov
+  </section>
+  <script src="https://kit.fontawesome.com/342a6e6322.js" crossorigin="anonymous"></script>
+  <script src="js/register.js"></script>
+</body>
+</html>
