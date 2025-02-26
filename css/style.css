@@ -11,7 +11,6 @@
   border: none;
   text-decoration: none;
   transition: 0.2s linear;
-  
 }
 
 /* Глобальные стили */
@@ -101,8 +100,6 @@ section {
 
 /* Стиль для кнопок */
 .btn {
-  display: inline-block;
-  margin-top: 1rem;
   padding: 0.9rem 3rem;
   font-size: 1.7rem;
   background: #07a1a1;
@@ -119,10 +116,6 @@ section {
 .header {
   padding: 1.5rem 7%;
   position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
   background: #f6fbf6;
   display: flex;
   align-items: center;
@@ -142,7 +135,6 @@ section {
 .search-container {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
   position: relative;
 }
 
@@ -270,9 +262,11 @@ section {
 
 /* Стиль для каждого элемента результата поиска */
 .result-item {
-  padding: 10px;
   border-bottom: 1px solid #ddd;
   cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   transition: background-color 0.3s ease;
 }
 
@@ -284,7 +278,6 @@ section {
   max-width: 50px;
   height: auto;
   vertical-align: middle;
-  margin-right: 10px;
 }
 
 .result-item h3 {
@@ -383,28 +376,26 @@ section {
   overflow: hidden;
 }
 
-
-
 .product-container {
   display: flex;
   justify-content: center;
   column-gap: 50px;
   align-items: center;
-  }
+}
 
-  #product-name {
-    font-size: 30px ;
-    margin-bottom: 10px;
-  }
+#product-name {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
 
-  .price {
-    font-size: 15px;
-  }
+.price {
+  font-size: 15px;
+}
 
-  #product-description {
-    font-size: 20px;
-    margin: 10px 0px;
-  }
+#product-description {
+  font-size: 20px;
+  margin: 10px 0px;
+}
 .products .box-container .box:hover .image img {
   transform: scale(1.2);
 }
@@ -900,8 +891,8 @@ section {
 .login-form {
   position: fixed;
   top: 0;
-  right: -101%;
-  z-index: 1000;
+  right: -100%;
+  z-index: 2000;
   width: 35rem;
   height: 100vh;
   background: #fff;
@@ -996,8 +987,6 @@ section {
   gap: 1.5rem;
   display: none;
 }
-
-
 
 .home .slides-container .slide.active {
   display: flex;
@@ -1140,7 +1129,7 @@ section {
 /* Стиль для кнопок входа и регистрации */
 .auth-buttons {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 1rem;
 }
 
@@ -1158,8 +1147,6 @@ section {
 .auth-btn:hover {
   background-color: #0056b3;
 }
-
-
 
 @media (max-width: 768px) {
   #search-btn {
@@ -1201,14 +1188,13 @@ section {
   }
 }
 
-
-
 /* Стиль для контейнера результатов поиска */
 .results-container {
   position: absolute;
   top: 100%;
   left: 0;
   width: 100%;
+  margin-top: 5px;
   background-color: #fff;
   border: 1px solid #ddd;
   border-top: none;
@@ -1216,7 +1202,7 @@ section {
   overflow-y: auto;
   z-index: 1000;
   display: none;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Стиль для кнопок входа и регистрации */
@@ -1227,7 +1213,6 @@ section {
 }
 
 .auth-buttons .btn {
-  padding: 10px 20px;
   background-color: #007bff;
   color: white;
   border: none;
@@ -1246,7 +1231,7 @@ section {
   position: fixed;
   top: 0;
   right: -101%;
-  z-index: 1000;
+  z-index: 2000;
   width: 35rem;
   height: 100vh;
   background: #fff;
@@ -1324,9 +1309,6 @@ section {
 .closer:hover {
   color: #96a4a5;
 }
-
-
-
 
 /* Стиль для каждого элемента результата */
 .result-item {
