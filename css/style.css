@@ -976,7 +976,7 @@ section {
 }
 
 .home {
- 
+  position: relative;
 }
 
 .home .slides-container .slide {
@@ -1060,11 +1060,14 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: 1.5rem;
+
 }
 
 .banner-container .banner {
   height: 25rem;
   overflow: hidden;
+  z-index: -10;
+  position: relative;
 }
 
 .banner-container .banner img {
@@ -1082,6 +1085,7 @@ section {
   top: 50%;
   left: 2rem;
   transform: translateY(-50%);
+
 }
 
 .banner-container .banner .content span {
