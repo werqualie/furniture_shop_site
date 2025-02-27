@@ -658,7 +658,6 @@ section {
 .footer {
   margin-top: 200px;
   background: #f6fbf6;
-  position: relative;
   bottom: 0;
 }
 
@@ -977,7 +976,7 @@ section {
 }
 
 .home {
-  position: relative;
+ 
 }
 
 .home .slides-container .slide {
@@ -1066,7 +1065,6 @@ section {
 .banner-container .banner {
   height: 25rem;
   overflow: hidden;
-  position: relative;
 }
 
 .banner-container .banner img {
