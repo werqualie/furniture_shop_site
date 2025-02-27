@@ -1066,8 +1066,8 @@ section {
 .banner-container .banner {
   height: 25rem;
   overflow: hidden;
-  z-index: -10;
   position: relative;
+  z-index: -10;
 }
 
 .banner-container .banner img {
@@ -1085,7 +1085,6 @@ section {
   top: 50%;
   left: 2rem;
   transform: translateY(-50%);
-
 }
 
 .banner-container .banner .content span {
